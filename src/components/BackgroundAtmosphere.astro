@@ -1,0 +1,36 @@
+---
+const particles = [
+	{ left: '6%', size: 12, color: 'var(--color-terracotta)', duration: '19s', delay: '0s' },
+	{ left: '17%', size: 8, color: 'var(--color-gold)', duration: '24s', delay: '3s' },
+	{ left: '31%', size: 15, color: 'var(--color-marigold)', duration: '21s', delay: '6s' },
+	{ left: '46%', size: 10, color: 'var(--color-terracotta)', duration: '27s', delay: '1s' },
+	{ left: '61%', size: 13, color: 'var(--color-gold)', duration: '20s', delay: '4s' },
+	{ left: '74%', size: 9, color: 'var(--color-marigold)', duration: '25s', delay: '8s' },
+	{ left: '86%', size: 12, color: 'var(--color-terracotta)', duration: '22s', delay: '2s' },
+	{ left: '94%', size: 7, color: 'var(--color-gold)', duration: '28s', delay: '5s' },
+];
+---
+
+<div class="pointer-events-none absolute inset-0 overflow-hidden">
+	<div class="noise-overlay absolute inset-0 opacity-[0.05] mix-blend-multiply"></div>
+
+	<div
+		class="animate-drift-a absolute -top-40 left-1/2 h-[42rem] w-[42rem] -translate-x-1/2 rounded-full opacity-50 blur-3xl"
+		style="background: radial-gradient(circle at center, var(--color-gold) 0%, var(--color-marigold) 45%, var(--color-terracotta) 70%, transparent 80%);"
+	></div>
+	<div
+		class="animate-drift-b absolute bottom-[-14rem] right-[-10rem] h-[30rem] w-[30rem] rounded-full opacity-40 blur-3xl"
+		style="background: radial-gradient(circle at center, var(--color-terracotta) 0%, var(--color-clay) 70%, transparent 82%);"
+	></div>
+	<div
+		class="animate-drift-b absolute left-[-8rem] top-1/3 h-[24rem] w-[24rem] rounded-full opacity-30 blur-3xl"
+		style="background: radial-gradient(circle at center, var(--color-gold) 0%, transparent 75%);"
+	></div>
+
+	{particles.map((p) => (
+		<span
+			class="animate-drift-fall absolute top-0 rounded-full"
+			style={`left:${p.left}; width:${p.size}px; height:${p.size}px; background:${p.color}; animation-duration:${p.duration}; animation-delay:${p.delay};`}
+		></span>
+	))}
+</div>

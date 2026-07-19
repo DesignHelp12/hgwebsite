@@ -1,0 +1,20 @@
+---
+import WaitlistForm from './WaitlistForm.astro';
+---
+
+<section id="waitlist" class="relative overflow-hidden bg-linear-to-br from-gold via-marigold to-terracotta px-6 py-24 text-center sm:px-10 sm:py-28">
+	<div class="noise-overlay pointer-events-none absolute inset-0 opacity-[0.06] mix-blend-overlay"></div>
+
+	<div data-reveal class="relative mx-auto max-w-2xl">
+		<h2 class="mb-4 font-display text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
+			Be first through the door.
+		</h2>
+		<p class="mx-auto mb-10 max-w-md text-base text-ink/70 sm:text-lg">
+			Join the waitlist and we'll let you know the moment our first game is ready to play.
+		</p>
+
+		<div class="flex justify-center">
+			<WaitlistForm variant="contrast" />
+		</div>
+	</div>
+</section>

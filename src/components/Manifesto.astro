@@ -1,0 +1,43 @@
+---
+const pillars = [
+	{
+		n: '01',
+		title: 'Pick up and play',
+		body: 'No tutorials, no friction. If you can\u2019t understand it in five seconds, we haven\u2019t done our job.',
+	},
+	{
+		n: '02',
+		title: 'Fresh mechanics',
+		body: 'We take genres you already love and twist the rules just enough to make them feel brand new.',
+	},
+	{
+		n: '03',
+		title: 'Built to feel good',
+		body: 'Every level gets playtested until it just clicks. Anything less doesn\u2019t make the cut.',
+	},
+];
+---
+
+<section id="manifesto" class="relative border-t border-ink/5 bg-sand px-6 py-24 sm:px-10 sm:py-32">
+	<div class="mx-auto max-w-5xl">
+		<div data-reveal class="mb-16 max-w-2xl">
+			<p class="mb-4 font-display text-xs font-semibold uppercase tracking-[0.3em] text-terracotta-deep">
+				Why Hyssop
+			</p>
+			<h2 class="font-display text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl">
+				Easy games.{' '}
+				<span class="text-brand-gradient">Loads of fun.</span>
+			</h2>
+		</div>
+
+		<div class="grid gap-10 sm:grid-cols-3 sm:gap-8">
+			{pillars.map((p, i) => (
+				<div data-reveal style={`transition-delay:${i * 120}ms`} class="border-t border-ink/10 pt-6">
+					<span class="font-display text-sm font-semibold text-ink/35">{p.n}</span>
+					<h3 class="mb-3 mt-3 font-display text-xl font-bold text-ink">{p.title}</h3>
+					<p class="text-sm leading-relaxed text-ink/60">{p.body}</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

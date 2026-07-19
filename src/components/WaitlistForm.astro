@@ -1,0 +1,40 @@
+---
+interface Props {
+	variant?: 'dark' | 'contrast';
+}
+
+const { variant = 'dark' } = Astro.props;
+
+const inputClass =
+	variant === 'contrast'
+		? 'w-full flex-1 rounded-full border border-ink/15 bg-cream/70 px-5 py-3.5 text-sm text-ink placeholder:text-ink/45 outline-none backdrop-blur-sm transition focus:border-ink/40 focus:bg-cream'
+		: 'w-full flex-1 rounded-full border border-ink/15 bg-white/70 px-5 py-3.5 text-sm text-ink placeholder:text-ink/40 outline-none backdrop-blur-sm transition focus:border-terracotta/50 focus:bg-white';
+
+const buttonClass =
+	variant === 'contrast'
+		? 'shrink-0 rounded-full bg-espresso px-6 py-3.5 font-display text-sm font-semibold text-cream shadow-lg shadow-espresso/30 transition hover:brightness-125 active:scale-[0.98]'
+		: 'shrink-0 rounded-full bg-linear-to-r from-terracotta via-marigold to-gold px-6 py-3.5 font-display text-sm font-semibold text-ink shadow-lg shadow-terracotta/30 transition hover:brightness-105 active:scale-[0.98]';
+---
+
+<form
+	class="waitlist-form seva-form formkit-form flex w-full max-w-md flex-col gap-3 sm:flex-row"
+	action="https://app.kit.com/forms/9700728/subscriptions"
+	method="post"
+	data-sv-form="9700728"
+	data-uid="9fda796793"
+	data-format="inline"
+	data-version="5"
+>
+	<ul data-element="errors" data-group="alert" class="empty:hidden order-first w-full rounded-lg bg-terracotta/10 px-4 py-2 text-xs text-terracotta-deep"></ul>
+	<input
+		type="email"
+		name="email_address"
+		required
+		placeholder="you@email.com"
+		aria-label="Email address"
+		class={inputClass}
+	/>
+	<button data-element="submit" type="submit" class={buttonClass}>
+		<span class="waitlist-label">Notify me</span>
+	</button>
+</form>

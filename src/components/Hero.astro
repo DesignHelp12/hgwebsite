@@ -1,0 +1,47 @@
+---
+import WaitlistForm from './WaitlistForm.astro';
+---
+
+<div class="relative z-10 flex flex-1 flex-col items-center justify-center px-6 pb-16 pt-4 text-center">
+	<div class="mb-8 animate-fade-up animate-float-y [animation-delay:0ms]">
+		<img
+			src="/images/logo-transparent.png"
+			alt="Hyssop Games"
+			class="h-24 w-auto drop-shadow-[0_10px_30px_rgba(58,35,23,0.18)] sm:h-28 md:h-32"
+		/>
+	</div>
+
+	<p class="mb-6 animate-fade-up font-display text-xs font-semibold uppercase tracking-[0.3em] text-terracotta-deep/80 [animation-delay:60ms]">
+		Indie Games Studio
+	</p>
+
+	<h1 class="mb-6 max-w-4xl animate-fade-up font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-ink [animation-delay:120ms] sm:text-7xl md:text-8xl">
+		Addictive fun,<br />
+		<span class="text-brand-gradient">reimagined.</span>
+	</h1>
+
+	<p class="mb-10 max-w-xl animate-fade-up text-base text-ink/60 [animation-delay:160ms] sm:text-lg">
+		We're a small studio building casual games —
+		classic hooks, fresh new mechanics, made to steal five minutes and keep you for fifty.
+	</p>
+
+	<div class="mb-4 flex w-full animate-fade-up justify-center [animation-delay:240ms]">
+		<WaitlistForm />
+	</div>
+	<p class="mb-14 animate-fade-up text-xs text-ink/40 [animation-delay:280ms]">
+		Be first to play. No spam, just launch news.
+	</p>
+
+	<div class="animate-fade-up [animation-delay:360ms]">
+		<a
+			href="#manifesto"
+			aria-label="Scroll to learn more"
+			class="group flex flex-col items-center gap-2 text-ink/35 transition hover:text-ink/65"
+		>
+			<span class="font-display text-[10px] font-medium uppercase tracking-[0.25em]">Our Philosophy</span>
+			<svg class="h-4 w-4 animate-bounce" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<path d="M12 4v16m0 0-6-6m6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</a>
+	</div>
+</div>

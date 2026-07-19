@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BackgroundAtmosphere from '../components/BackgroundAtmosphere.astro';
+import SiteNav from '../components/SiteNav.astro';
+import Hero from '../components/Hero.astro';
+import Manifesto from '../components/Manifesto.astro';
+import WaitlistCta from '../components/WaitlistCta.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+---
+
+<Layout>
+	<main class="relative flex min-h-screen flex-col overflow-hidden bg-linear-to-b from-cream via-cream to-sand">
+		<BackgroundAtmosphere />
+		<SiteNav />
+		<Hero />
+	</main>
+
+	<Manifesto />
+	<WaitlistCta />
+	<SiteFooter />
+
+	<script>
+		const revealTargets = document.querySelectorAll<HTMLElement>('[data-reveal]');
+
+		if ('IntersectionObserver' in window && revealTargets.length) {
+			const observer = new IntersectionObserver(
+				(entries) => {
+					for (const entry of entries) {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('is-visible');
+							observer.unobserve(entry.target);
+						}
+					}
+				},
+				{ threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+			);
+
+			revealTargets.forEach((el) => observer.observe(el));
+		} else {
+			revealTargets.forEach((el) => el.classList.add('is-visible'));
+		}
+	</script>
+</Layout>
