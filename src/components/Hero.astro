@@ -3,12 +3,26 @@ import WaitlistForm from './WaitlistForm.astro';
 ---
 
 <div class="relative z-10 flex flex-1 flex-col items-center justify-center px-6 pb-16 pt-4 text-center">
-	<div class="mb-8 animate-fade-up animate-float-y [animation-delay:0ms]">
+	<div class="mb-8 flex items-center gap-4 animate-fade-up animate-float-y [animation-delay:0ms] sm:gap-5">
 		<img
-			src="/images/logo-transparent.png"
-			alt="Hyssop Games"
-			class="h-24 w-auto drop-shadow-[0_10px_30px_rgba(58,35,23,0.18)] sm:h-28 md:h-32"
+			src="/images/logo-mark.png"
+			alt=""
+			aria-hidden="true"
+			class="h-16 w-auto drop-shadow-[0_10px_30px_rgba(58,35,23,0.18)] sm:h-20 md:h-24"
 		/>
+		<div class="flex flex-col items-start text-left leading-[0.85]">
+			<span class="font-display text-3xl font-black uppercase tracking-tight text-ink sm:text-4xl md:text-5xl">
+				Hyssop
+			</span>
+			<span class="flex items-baseline gap-1.5">
+				<span class="font-display text-3xl font-black uppercase tracking-tight text-terracotta sm:text-4xl md:text-5xl">
+					Games
+				</span>
+				<span class="font-display text-[10px] font-bold uppercase tracking-tight text-gold sm:text-xs">
+					Ltd
+				</span>
+			</span>
+		</div>
 	</div>
 
 	<p class="mb-6 animate-fade-up font-display text-xs font-semibold uppercase tracking-[0.3em] text-terracotta-deep/80 [animation-delay:60ms]">
